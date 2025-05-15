@@ -1,0 +1,18 @@
+{{define "card.html"}}
+<article class="card w-48 bg-base-100 shadow-lg border border-gray-400 p-4">
+  <img
+    class="self-center"
+    alt="{{.Name}}"
+    width="80"
+    src="{{.Sprites.Other.Showdown.FrontDefault}}"
+  />
+  <h2 class="card-title self-center capitalize">{{.Name}}</h2>
+  <ul class="mt-2 text-sm">
+    {{range .Types}}
+      <li><strong>Type:</strong> {{.TypeDetail.Name}}</li>
+    {{end}}
+    <li><strong>Height:</strong> {{.Height}}</li>
+    <li><strong>Weight:</strong> {{.Weight}}</li>
+  </ul>
+</article>
+{{end}}
